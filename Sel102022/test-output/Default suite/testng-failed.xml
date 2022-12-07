@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="testSel.aoftAssert">
+      <class name="loginTests.TC02_LoginError">
         <methods>
-          <include name="tc01"/>
+          <include name="startWebDriver"/>
+          <include name="TC02"/>
+          <include name="closeDriver"/>
         </methods>
-      </class> <!-- testSel.aoftAssert -->
+      </class> <!-- loginTests.TC02_LoginError -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
