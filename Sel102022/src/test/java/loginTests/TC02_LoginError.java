@@ -26,7 +26,7 @@ public class TC02_LoginError {
 	@Test
 	public void TC02() {
 		loginPage.login(GlobalVariables.LOCK_USER, GlobalVariables.ALL_USER_PWD);
-		Assert.assertTrue(false);
+		Assert.assertTrue(loginPage.validateLockError());
 	}
 	
 	@AfterTest
