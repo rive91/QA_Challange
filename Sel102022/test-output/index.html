@@ -5,8 +5,9 @@
   <meta charset='utf-8'>
   <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
-    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -23,8 +24,9 @@
   <body>
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-RegressionAutomatedQA" class="navigator-link">
-              <span class="suite-name border-failed">RegressionAutomatedQA</span>
+              <span class="suite-name border-passed">RegressionAutomatedQA</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-RegressionAutomatedQA" class="navigator-link ">
-                    <span>C:\Users\rive\git\repository\Sel102022\src\test\java\testSuites\loginSuite.xml</span>
+                    <span>C:\Users\rive\git\repository\Sel102022\src\test\java\testSuites\purchaseFlow_TestSuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,21 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-RegressionAutomatedQA" class="hide-methods failed suite-RegressionAutomatedQA"> (hide)</a> <!-- hide-methods failed suite-RegressionAutomatedQA -->
-                      <a href="#" panel-name="suite-RegressionAutomatedQA" class="show-methods failed suite-RegressionAutomatedQA"> (show)</a> <!-- show-methods failed suite-RegressionAutomatedQA -->
-                    </span>
-                    <div class="method-list-content failed suite-RegressionAutomatedQA">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-RegressionAutomatedQA" title="loginTests.TC02_LoginError" class="method navigator-link" hash-for-method="TC02">TC02</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-RegressionAutomatedQA -->
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -116,7 +104,12 @@
                     <div class="method-list-content passed suite-RegressionAutomatedQA">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-RegressionAutomatedQA" title="loginTests.TC01_Login" class="method navigator-link" hash-for-method="TC01">TC01</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-RegressionAutomatedQA" title="purchaseFlow_Tests.TC01_PurchaseFlow_Buy_One_Item" class="method navigator-link" hash-for-method="TC01">TC01</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-RegressionAutomatedQA" title="purchaseFlow_Tests.TC02_PurchaseFlow_Buy_More_Than_One_Item" class="method navigator-link" hash-for-method="TC02">TC02</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-RegressionAutomatedQA -->
@@ -131,33 +124,10 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-RegressionAutomatedQA" class="panel RegressionAutomatedQA">
-          <div class="suite-RegressionAutomatedQA-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">loginTests.TC02_LoginError</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC02">
-                  </a> <!-- TC02 -->
-                  <span class="method-name">TC02</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at loginTests.TC02_LoginError.TC02(TC02_LoginError.java:29)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 20 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-RegressionAutomatedQA-class-failed -->
           <div class="suite-RegressionAutomatedQA-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">loginTests.TC01_Login</span>
+              <span class="class-name">purchaseFlow_Tests.TC01_PurchaseFlow_Buy_One_Item</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -169,26 +139,41 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-RegressionAutomatedQA-class-passed -->
+          <div class="suite-RegressionAutomatedQA-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">purchaseFlow_Tests.TC02_PurchaseFlow_Buy_More_Than_One_Item</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC02">
+                  </a> <!-- TC02 -->
+                  <span class="method-name">TC02</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-RegressionAutomatedQA-class-passed -->
         </div> <!-- panel RegressionAutomatedQA -->
         <div panel-name="test-xml-RegressionAutomatedQA" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\rive\git\repository\Sel102022\src\test\java\testSuites\loginSuite.xml</span>
+            <span class="header-content">C:\Users\rive\git\repository\Sel102022\src\test\java\testSuites\purchaseFlow_TestSuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite parallel=&quot;tests&quot; name=&quot;RegressionAutomatedQA&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test name=&quot;TC01_Login&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;TC01_PurchaseFlow_Buy_One_Item&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;loginTests.TC01_Login&quot;/&gt;
+      &lt;class name=&quot;purchaseFlow_Tests.TC01_PurchaseFlow_Buy_One_Item&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- TC01_Login --&gt;
-  &lt;test name=&quot;TC02_LoginError&quot;&gt;
+  &lt;/test&gt; &lt;!-- TC01_PurchaseFlow_Buy_One_Item --&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;TC02_PurchaseFlow_Buy_More_Than_One_Item&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;loginTests.TC02_LoginError&quot;/&gt;
+      &lt;class name=&quot;purchaseFlow_Tests.TC02_PurchaseFlow_Buy_More_Than_One_Item&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- TC02_LoginError --&gt;
+  &lt;/test&gt; &lt;!-- TC02_PurchaseFlow_Buy_More_Than_One_Item --&gt;
 &lt;/suite&gt; &lt;!-- RegressionAutomatedQA --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -200,10 +185,10 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">TC01_Login (1 class)</span>
+                <span class="test-name">TC01_PurchaseFlow_Buy_One_Item (1 class)</span>
               </li>
               <li>
-                <span class="test-name">TC02_LoginError (1 class)</span>
+                <span class="test-name">TC02_PurchaseFlow_Buy_More_Than_One_Item (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -231,18 +216,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC01')
-data.setCell(0, 2, 'loginTests.TC01_Login')
-data.setCell(0, 3, 207);
+data.setCell(0, 1, 'TC02')
+data.setCell(0, 2, 'purchaseFlow_Tests.TC02_PurchaseFlow_Buy_More_Than_One_Item')
+data.setCell(0, 3, 1268);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'TC02')
-data.setCell(1, 2, 'loginTests.TC02_LoginError')
-data.setCell(1, 3, 173);
+data.setCell(1, 1, 'TC01')
+data.setCell(1, 2, 'purchaseFlow_Tests.TC01_PurchaseFlow_Buy_One_Item')
+data.setCell(1, 3, 1223);
 window.suiteTableData['RegressionAutomatedQA']= { tableData: data, tableDiv: 'times-div-RegressionAutomatedQA'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 380 ms</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-RegressionAutomatedQA">
               </div> <!-- times-div-RegressionAutomatedQA -->
             </div> <!-- times-div -->
@@ -268,48 +253,50 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">loginTests.TC01_Login</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">purchaseFlow_Tests.TC01_PurchaseFlow_Buy_One_Item</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">startWebDriver</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">loginTests.TC02_LoginError</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">purchaseFlow_Tests.TC02_PurchaseFlow_Buy_More_Than_One_Item</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">startWebDriver</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">TC02</span>
-                <span class="method-start">340 ms</span>
-              </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">loginTests.TC01_Login</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">purchaseFlow_Tests.TC01_PurchaseFlow_Buy_One_Item</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">TC01</span>
-                <span class="method-start">340 ms</span>
+                <span class="method-start">1175 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">loginTests.TC02_LoginError</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">purchaseFlow_Tests.TC02_PurchaseFlow_Buy_More_Than_One_Item</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">TC02</span>
+                <span class="method-start">2151 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">purchaseFlow_Tests.TC01_PurchaseFlow_Buy_One_Item</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">closeDriver</span>
-                <span class="method-start">519 ms</span>
+                <span class="method-start">2402 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">loginTests.TC01_Login</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">purchaseFlow_Tests.TC02_PurchaseFlow_Buy_More_Than_One_Item</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">closeDriver</span>
-                <span class="method-start">547 ms</span>
+                <span class="method-start">3420 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
     </div> <!-- wrapper -->
   </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
 </html>

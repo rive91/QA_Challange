@@ -1,0 +1,46 @@
+package purchaseFlow_Tests;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import commonClasses.GlobalVariables;
+import commonClasses.SetupDriver;
+import commonClasses.WrapClass;
+import navigationPages.InventoryPage;
+import navigationPages.LoginPage;
+
+public class TC03_Remove_item_on_inventory_page {
+
+	// Declarar e Inicializar el webDriver
+	WebDriver driver = SetupDriver.setupDriver();
+
+	// Page Objects
+	LoginPage loginPage = new LoginPage(driver);
+	InventoryPage inventoryPage = new InventoryPage(driver);
+
+	@BeforeTest
+	public void startWebDriver() {
+		driver.get(GlobalVariables.HOME_PAGE);
+	}
+
+	@Test
+	public void TC03() {
+		//Step 1: Go to the login page and login as standard_user
+		loginPage.login(GlobalVariables.STANDARD_USER, GlobalVariables.ALL_USER_PWD);
+		
+		//Step 2: Click on "Add to Cart" button of the first item
+		inventoryPage.addToCartAndVerifyRemoveButton();
+		
+		//Step 3: Click on "Remove" button of the first item
+		Assert.assertTrue(inventoryPage.clickRemoveAndVerifyaddToCartButton());
+	}
+	
+	@AfterTest
+	public void closeDriver() {
+		WrapClass.takeScreenshot(driver, "TC_03");
+		driver.quit();
+	}
+}
